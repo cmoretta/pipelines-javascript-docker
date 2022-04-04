@@ -25,7 +25,6 @@ steps:
   inputs:
     containerRegistry: |
       $(dockerHub) 
-      email: ((docker-hub-email))
       username: ((docker-hub-username))
       password: ((docker-hub-password))
     repository: $(imageName)
