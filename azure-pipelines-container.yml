@@ -20,4 +20,16 @@ steps:
     command: build
     Dockerfile: app/Dockerfile
 
-
+- task: Docker@2
+  displayName: Push image
+  inputs:
+    containerRegistry: |
+      $(dockerHub) 
+      email: ((docker-hub-email))
+      username: ((docker-hub-username))
+      password: ((docker-hub-password))
+    repository: $(imageName)
+    command: push
+    tags: |
+      test1
+      test2
