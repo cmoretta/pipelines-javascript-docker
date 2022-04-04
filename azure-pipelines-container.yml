@@ -24,7 +24,7 @@ steps:
   displayName: Push image
   inputs:
     containerRegistry: |
-      $(cmoretta-dockhub-repo) 
+      $(cmoretta-dockerhub) 
       username: ((docker-hub-username))
       password: ((docker-hub-password))
     repository: $(imageName)
