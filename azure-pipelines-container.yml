@@ -11,6 +11,8 @@ pool:
 
 variables:
   imageName: 'pipelines-javascript-docker'
+  registryName: 'cmoretta-dockerhub'
+  repoName: 'cmoretta-dockhub-repo'
 
 steps:
 - task: Docker@2
@@ -24,11 +26,19 @@ steps:
   displayName: Push image
   inputs:
     containerRegistry: |
-      $(cmoretta-dockerhub) 
-      username: ((docker-hub-username))
-      password: ((docker-hub-password))
-    repository: $(imageName)
+     $(cmoretta-dockerHub)
+     repository: $(imageName)
     command: push
     tags: |
       test1
       test2
+  #inputs:
+  #  containerRegistry: |
+  #    $(dockerhub) 
+  #    username: ((docker-hub-username))
+  #    password: ((docker-hub-password))
+  #  repository: $(imageName)
+  #  command: push
+  #  tags: |
+  #    test1
+  #    test2
