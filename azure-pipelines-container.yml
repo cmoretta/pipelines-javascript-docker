@@ -12,7 +12,7 @@ pool:
 variables:
   imageName: 'pipelines-javascript-docker'
   registryName: 'cmoretta-dockerhub'
-  repoName: 'cmoretta-learn'
+  repoName: 'cmoretta-dockhub-repo'
 
 steps:
 - task: Docker@2
