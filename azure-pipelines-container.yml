@@ -27,7 +27,7 @@ steps:
   inputs:
     containerRegistry: |
      $(cmoretta-dockerHub)
-     repository: $(imageName)
+     repository: $(cmoretta-dockhub-repo)
     command: push
     tags: |
       test1
