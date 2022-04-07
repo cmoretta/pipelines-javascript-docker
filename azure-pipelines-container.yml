@@ -29,7 +29,7 @@ steps:
      $(registryName)
      repository: $(repoName)
     command: push
-    tags: |
-      test1
-      test2
+    #tags: |
+    #  test1
+    #  test2
  
